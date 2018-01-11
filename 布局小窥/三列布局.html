@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test三列布局</title>
+	<!--
+		布局描述：从上到下分header content footer。
+		content分左 中 右三部分，就是左中右排列，
+		特点：
+		浮动块（左右）放前面优先渲染
+		左边左浮动，右边右浮动，中间自适应（没有设置宽度） 
+	 -->
+	<style>
+		.layout {
+			height: 30px;
+		}
+		#header {
+			background: #bbb;
+		}
+		#footer {
+			background: orange;
+		}
+		#content {
+			margin: 20px auto;
+		}
+		#content:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.aside {
+			width: 100px;
+			height: 500px;
+			background-color: #0f0;
+			float: left;
+
+		}
+		.extra {
+			width: 100px;
+			height: 500px;
+			background-color: #f00;
+			float: right;
+		}
+		.main {
+			height: 500px;
+			background-color: #00f;
+			margin: 0 110px;
+		}		
+	</style>
+</head>
+<body>
+	<div id="header" class="layout">header</div>
+	<div id="content">
+		<div class="aside">aside</div>
+		<div class="extra">extra</div>
+		<div class="main">main</div>
+	</div>
+	<div id="footer"  class="layout">footer</div>	
+</body>
+</html>

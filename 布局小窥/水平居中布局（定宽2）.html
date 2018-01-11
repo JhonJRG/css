@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>内部元素水平居中（text-align:center）</title>
+	<style type="text/css">
+		/*
+			布局描述：
+			从上到下三栏header/content/footer都为定宽，因此content中box的宽度及之间的margin都是精确计算的
+			布局特点：
+			1.没有浮动
+			2.#content .cover{display:inline-block;},然后上一级text-align:center;
+			评价：可以一用，但可扩展性太小了
+		*/
+
+		.layout {
+			width: 960px;
+			margin: 0 auto;
+		}
+		#header {
+			height: 50px;
+			background: red;	
+		}
+		#content {
+            height: 500px;	
+			background: #ccc;
+			text-align: center;
+			border: 1px solid;
+			/*清除行内块的缝隙*/
+			font-size: 0;
+		}
+        #content .cover {
+			width: 960px;        	
+			display: inline-block;
+			text-align: center;
+        }
+		#content .cover .box {
+			width: 300px;
+			height: 500px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		#content .cover .box1 {
+			background: green;	
+		}
+		#content .cover .box2 {
+			background: orange;
+			margin-left: 30px;	
+		}
+		#content .cover .box3 {
+			background: purple;
+			margin-left: 30px;
+		}
+		#footer {
+			height: 50px;
+			background: yellow;
+		}
+	
+	</style>
+</head>
+<body>
+		<div id="header" class="layout" >头部</div>
+		<div id="content">
+			<div class="cover">
+			    <div class="box1 box"></div>
+				<div class="box2 box"></div>
+				<div class="box3 box"></div>
+			</div>
+		</div>
+		<div id="footer" class="layout">尾部</div>
+</body>
+</html>

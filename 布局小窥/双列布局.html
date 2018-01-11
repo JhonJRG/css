@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test双列布局</title>
+	<style>
+	/*
+		布局描述：从上到下为三行 header content footer
+		特点：content分两列，一列定宽浮动，另一列自适应，中间用margin隔开（自适应的那一列写）
+	*/
+		.layout {
+			min-width: 960px;  /* 使上下栏都能全屏*/
+			padding: 20px;			
+		}
+		#header {
+			background: orange;
+		}
+		#content {	    
+			margin: 20px auto;
+		    background: #ccc;			
+		}
+		#content:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		#extra {
+		    width: 160px;   /*写成百分比无法设置margin*/
+		    background: #0f0;
+		    height: 300px;		    
+		    float: right;
+			border: 1px solid;
+		}
+		#main {
+		    height: 300px;
+			background: #00f;
+			margin-right: 200px;
+		}		
+		#footer {
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="header" class="layout">#header</div>
+	<div id="content">
+		<div id="extra">#extra</div>
+		<div id="main">#main</div>
+	</div>
+	<div id="footer" class="layout">#footer</div>
+</body>
+</html>

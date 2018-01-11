@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test单列布局（通栏）</title>
+	<style type="text/css">
+		/*
+			就是普通布局，一看就明
+		*/
+		body {
+			/* 使布局的宽度充满屏幕 */
+			min-width: 800px;
+		}
+		.layout {
+			width: 100%;
+			height: 50px;
+		}
+		#header {
+			background: orange;
+		}
+		#content {
+			width: 800px;
+			height: 500px;
+			margin: 10px auto;			
+			background: #00f;
+		}
+		#footer {
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="header" class="layout">#header</div>
+	<div id="content">#content</div>
+	<div id="footer" class="layout">#footer</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test双飞翼</title>
+<!-- 	 双飞翼布局和圣杯布局不同的地方就是
+ 		 它的两翼（左边、右边）没有relative定位。它的中间分两层，外层width:100%;float:left; 内层用margin分开两翼（左边、右边）
+		 两个布局的相同点是，都需要浮动，中间层都放在第一行优先渲染 ，浮动过程中左边、右边都需要与中间排列到一行。
+		 圣杯布局在分割两翼的时候要结合两翼（左边、右边）定位和中间层的负margin
+		 注意：如果想使网页缩放页面不变形的话，使其两翼（左边、右边）宽度相对变小即可（原因就是整个网页的宽度变小了）
+ -->	
+	 <style>
+	 	#header {
+			background: purple;
+	 	}
+	 	#content {
+			margin: 30px auto;
+	 	}
+	 	#content:after {
+	 		content: '';
+	 		display: block;	
+	 		clear: both;
+	 	}
+	 	#main-wrap {
+	 		width: 100%;
+	 		height: 100px;
+	 		float: left;    /*这里是重点，也就是和圣杯布局不同点之一*/
+			background: #ccc;
+	 	}
+	 	#aside {
+	 		width: 100px;
+	 		height: 500px;
+	 		background: #f00;
+	 		float: left;
+	 		margin-left: -100%;
+	 	}
+	 	#extra {
+	 		width: 100px;
+	 		height: 500px;
+	 		background: #0f0;
+	 		float: left;
+	 		margin-left: -100px;
+	 	}
+	 	#main {
+			height: 300px;
+			background: yellow;
+			margin: 0 110px;   /*这里是重点，也就是和圣杯布局不同点之一*/
+	 	}
+	 	#footer {
+			background: pink;
+	 	}
+	 </style>
+</head>
+<body>
+	<div id="header" class="">#header</div>
+	<div id="content">
+		<div id="main-wrap">
+			<div id="main">#main</div>
+		</div>
+		<div id="aside">#aside</div>
+		<div id="extra">#extra</div>
+	</div>
+	<div id="footer">#footer</div>
+	
+</body>
+</html>
