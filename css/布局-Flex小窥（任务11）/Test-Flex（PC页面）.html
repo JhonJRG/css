@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test-Flex(PC双飞翼)</title>
+	<style>
+		/*
+			注意：没有浮动
+		*/
+		.layout {
+			padding: 20px;
+		}
+		#header {
+			background: orange;
+		}
+		#footer {
+			background: purple;
+		}
+		#content {
+			display: flex;
+		}
+		#aside {
+			width: 100px;
+			height: 300px;
+			background-color: #f00;
+			order: 3;
+		}
+		#nav {
+			width: 100px;
+			height: 300px;
+			background-color: #0f0;
+			order: 1;
+		}		
+		#main {
+			height: 300px;
+			background-color: #00f;
+			/*flxe-grown:1;是内容占满余下的页面*/
+			flex: 1;  
+			/*这是顺序*/
+			order: 2;
+		}
+	</style>
+</head>
+<body>
+	<div id="header" class="layout">header</div>
+	<div id="content">
+		<div id="aside">aside</div>
+		<div id="main">main</div>
+		<div id="nav">nav</div>
+	</div>
+	<div id="footer" class="layout">footer</div>
+</body>
+</html>

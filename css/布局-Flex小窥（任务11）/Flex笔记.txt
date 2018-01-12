@@ -1,0 +1,48 @@
+
+<!-- 
+	flex-container 可以理解为css盒子的整体
+	1、
+	排列方向  属性值：横轴/纵轴 反向(reverse)
+	flex-direction: row/column  row-reverse/column-reverse
+	换行    属性值：不换行/换行
+	flex-wrap: nowrap/wrap
+	简写形式：
+	flex-flow: row nowrp;
+
+	2、
+	主轴方向对齐方式(变换横轴纵轴排列方式)  
+	属性值 把空间平均放在中间/把空间平均放在周围/从起点往后排列/从终点往前排列/放中间
+	justify-content: space-between/space-around/flex-start/flex-end/center
+
+	3、
+	侧轴对齐方式(外层在同一高度下，内部元素不写高度值(由内容决定其高度)进行排列)
+	属性值: 伸展/中间/尾部/头部
+	align-items: stretch/center/flex-end/flex-start
+    
+    4、不常用——>多行/多列对齐(控制块间距) stretch为默认值，意思是间距平均分配[不看元素的宽高(看你以横轴还是纵轴为主轴)]
+    align-content: stretch/center/flex-end/flex-start
+
+	——————————————————————————————————————
+	flex-items 可以理解为css盒子的不同块
+	
+	成长（可以理解为所占比重的大小 当空间足够时） 属性值：数字
+	flex-grown:1/2/3……
+
+	缩小（也是所占比重的大小 当空间不够时）
+	flex-shrink:1/2/3……
+
+	原始大小（不涨不缩）注：一般不用，因为一般大小就是原始大小
+	属性值自定义，不写就是原始值，写了就是你所定义的大小
+	flex-basis：
+
+	缩写形式
+	flex: grown shrink basis
+
+	改变顺序(干掉双飞翼布局 注：就是可以更换块的排列顺序)
+	属性值：数字
+	order:1/2/3
+	
+	自身的对齐方式 (处于同一高度内的不同块级元素如何对齐)
+	属性值：灵活使用 注：因为属性值比较多
+	align-self:center
+ -->

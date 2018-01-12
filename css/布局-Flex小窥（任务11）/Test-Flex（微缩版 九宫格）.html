@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test-Flex</title>
+	<style>
+	/*
+		微缩版 九宫格
+		注意：要计算准确才能做得到
+	*/
+		#container {
+			width: 240px;
+			height: 180px;
+			background: #ccc;
+			border: 1px solid;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-between;
+			align-content: space-between;
+		}
+		.box {
+			width: 70px;
+			height: 50px;
+			background: #fff;
+		}	
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+ 		<div class="box">4</div>
+		<div class="box">5</div>
+		<div class="box">6</div>
+		<div class="box">7</div>
+		<div class="box">8</div>
+		<div class="box">9</div>
+		<!-- <div class="box">10</div>  -->
+	</div>
+</body>
+</html>

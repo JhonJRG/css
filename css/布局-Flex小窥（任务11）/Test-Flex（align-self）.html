@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test-Flex</title>
+	<style>
+	/*
+			align-self 自身的对齐方式
+	*/
+		#container {
+			width: 500px;
+			background: #ccc;
+			border: 1px solid;
+			display: flex;
+		}
+		.box {
+			margin-right: 10px;
+			width: 70px;
+			background: #fff;
+		}
+		.box:first-child {
+			align-self: flex-start;
+		}
+		.box:nth-child(2) {
+			align-self: center;
+		}
+		.box:nth-child(3) {
+			align-self: flex-end;
+		}		
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box">1</div>
+		<div class="box">2
+			<br>
+		</div>
+		<div class="box">3
+			<br>
+		</div>
+ 		<div class="box">4
+			<br>
+			333 <br>
+			444 <br>
+			555 <br>
+			666 <br>
+ 		</div>
+<!--		<div class="box">5</div>
+		<div class="box">6</div>
+		<div class="box">7</div>
+		<div class="box">8</div>
+		<div class="box">9</div>
+		<div class="box">10</div> -->
+	</div>
+</body>
+</html>

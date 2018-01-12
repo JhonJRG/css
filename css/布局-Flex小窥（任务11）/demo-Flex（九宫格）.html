@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex九宫格</title>
+	<style>
+		#container {
+			width: 790px;
+			height: 670px;
+			background-color: #ccc;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			/*align-items: top;*/
+			justify-content: space-between;
+			align-content: space-between;
+		}	
+		#container>.box {
+			width: 250px;
+			height: 210px;
+			border: 1px solid #000;
+			background-color: #f00;
+			/*align-self: flex-end;*/
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+		<div class="box">5</div>
+		<div class="box">6</div>
+		<div class="box">7</div>
+		<div class="box">8</div>
+		<div class="box">9</div>
+	</div>
+</body>
+</html>
