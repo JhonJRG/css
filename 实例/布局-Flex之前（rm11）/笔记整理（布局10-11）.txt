@@ -55,7 +55,7 @@ transform: translate(-50%,-50%);
  不让父子外边距合并方法
 1.在父元素css里加border:1px solid;
 2.在父元素css里加overflow: hidden;
-3.在父元素css里加overflow: auto;
+3.在父元素css里加overflow: auto;（或者其他值，意即overflow的值不为visible都可）
 4.在父元素css里加display:inline-block;(副作用：会使margin:0 auto;失效)
 5.在父元素css里加float: left;(副作用：会使margin:0 auto;失效)
 6.在父元素css里加padding:1px;(副作用：会使padding四个方向整体增加1px)
