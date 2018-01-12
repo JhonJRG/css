@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test(上下全屏)</title>
+	<style>
+		/*
+			上下两屏全屏显示，就要求
+			1.是两个块，要全屏显示需要让其父元素body以及根元素html的height为100%，然后自己继承这个100%的height
+			注意：要阻断父子外边距合并，body是块的父元素，块是其内容块的父元素
+		*/
+		html,body {
+			height: 100%;
+			margin: 0;
+		}
+		.layout {
+			height: 100%;
+			background: rgba(0,0,0,0.4);
+			/* 阻断body和上下方区块的外边距合并*/
+			overflow: hidden;
+		}
+		.box {
+			width: 600px;
+			height: 400px;
+			background: #fff;
+			/* 阻断上下方边距和里面内容的外边距合并*/
+			overflow: hidden;
+		}
+		#above {
+			background: #ccc;
+		}
+		#under {
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="above" class="layout">
+		<div class="box">
+			<h1>hello</h1>
+			<p>你好，今天</p>
+		</div>
+	</div>
+	<div id="under" class="layout">
+		<h1>hello</h1>
+		<p>你好，今天</p>		
+	</div>
+</body>
+</html>

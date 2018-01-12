@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test(全屏显示1)</title>
+	<style>
+	/*
+		1.全屏显示常用于网站首页 
+		2.原理是 让网页根元素html,body的height为100%,将要显示的块级元素的height也100%
+		3.由于BFC的存在 body是块级元素的父级，块级元素是其下面内容块的父级。根据BFC的特性，父子外边距会合并（较小值的会被合并），只会显示较大值的margin。为了阻断外边距合并需要在其两个父级上都加上相应的阻断方式
+		也就是如下的几种方式：
+		总结：阻止父子外边距合并：边框border voerflow:hidden/auto; 形变display 盒模型内边距 浮动定位 
+	*/
+		html,body {
+			height: 100%;
+		}
+		body {
+			margin: 0;
+		}
+		#center {
+			height: 100%;
+			background: #ccc;
+			padding: 1px;
+		}
+		#center>.box {
+			width: 700px;
+			height: 500px;
+			background-color: orange;
+			overflow: hidden;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="center">
+		<div class="box">
+			<p>pppppppppppppppppp</p>
+		</div>
+	</div>
+	
+</body>
+</html>

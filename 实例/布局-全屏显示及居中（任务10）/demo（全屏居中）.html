@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test(全屏居中)</title>
+	<style>
+		/*
+			全屏要素
+			1. 要全屏的块级的height要设定为100%，其父级的父级也就是body、html都要设定为100%的height
+			2. 本例中的全屏居中显示，所以要对其块级元素进行定位，正好position也阻断了父子的外边距合并
+		*/
+		html,body {
+			height: 100%;
+		}
+		body {
+			margin: 0;
+		}
+		#cover {
+			height: 100%;
+			background: #ccc;
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.show-wrap {
+			width: 200px;
+			height: 100px;
+			background: #ccc;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			/* 始终全屏，随内容的变化而全屏*/
+			transform: translate(-50%,-50%);
+/*			margin-left: -300px;
+			margin-top: -100px;*/
+		}
+
+	</style>
+</head>
+<body>
+	<div id="cover">
+		<div class="show-wrap">
+			全屏居中显示打发发生的发多少发顺丰阿萨德大发的说法阿道夫阿萨德发多少发生的爱迪生发发阿萨德的发阿萨德的发阿萨德的发阿萨德的
+		</div>
+	</div>
+	
+</body>
+</html>
